@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2 class="text-center">Inventaire des Produits</h2>
+
+
+
+  <div class="mb-3 h-25 w-25">
+    <input
+      type="text"
+      placeholder="Entrer le Nom"
+      [(ngModel)]="findtext"
+      class="form-control"
+      aria-label="Nom du produit"
+    />
+  </div>
+
+
+  <table class="table table-striped table-bordered" style="margin: 20px">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">PRICE</th>
+      <th scope="col">CATEGORY</th>
+      <th scope="col">STOCK</th>
+    </tr>
+    </thead>
+    <tbody>
+<!--    [ngClass]="{'table-success': t.stock > 50, 'table-danger': t.stock <= 50-->
+    <tr *ngFor="let t of (td | filter: findtext) " >
+      <td>{{t.id}}</td>
+      <td>{{t.name}}</td>
+      <td>{{t.price | currency:'EUR'}}</td>
+      <td>{{t.category}}</td>
+      <td  [ngClass]="{'a':t.stock >=100,'b':t.stock <=100}">{{t.stock}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <a routerLink="/test" class="btn btn-success">Ajouter un Produit</a>
+</div>
