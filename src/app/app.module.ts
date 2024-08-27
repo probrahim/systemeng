@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FilterPipe } from './filter.pipe';
 import { AddProductComponent } from './add-product/add-product.component';
 import { HighlightDirective } from './highlight.directive';
+import { FULLComponent } from './full/full.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HighlightDirective } from './highlight.directive';
     FilterPipe,
     AddProductComponent,
     HighlightDirective,
+    FULLComponent,
 
   ],
   imports: [

@@ -34,6 +34,7 @@ export class AddProductComponent {
       this.proc.reset();
       this.router.navigate(['/tp'])
 
+
     }
   }
 
